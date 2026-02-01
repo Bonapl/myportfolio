@@ -1,0 +1,150 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'montserrat', sans-serif;
+    background-color: #ffffff;
+    padding: 12px;
+}
+
+/* Style Navigation Bar*/
+nav{
+    background:linear-gradient(45deg,#000000,#ffffffa1);
+    padding:15px 40px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    border-radius: 7px;
+    position: sticky;
+    top: 0;
+}
+
+.logo{
+    color:#dadada;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.menu{
+    display:flex;
+    gap:25px;
+}
+
+.menu a{
+    color:rgb(0, 0, 0);
+    text-decoration:none;
+    font-size:16px;
+    transition:0.3s;
+    text-transform: uppercase;
+}
+
+.menu a:hover{
+    color:#ff0c0c;
+}
+
+
+#toggle{
+    display:none;
+}
+
+.hamburger{
+    display:none;
+    font-size:28px;
+    color:white;
+    cursor:pointer;
+}
+.hamburger .fa-bars{
+    color:#000000;
+}
+
+@media(max-width:768px){
+    .menu{
+        position:absolute;
+        top:65px;
+        left:0;
+        width:100%;
+        background:transparent;
+        flex-direction:column;
+        text-align:center;
+        display:none;
+        padding:20px 0;
+        background-color: #ffffff;
+    }
+
+    .menu a{
+        padding:12px 0;
+    }
+
+    #toggle:checked + .hamburger + .menu{
+        display:flex;
+    }
+
+    .hamburger{
+        display:block;
+    }
+}
+
+
+/* Style main contain*/
+.main {
+    margin-top: 50px;
+    height: 600px;
+    border-radius: 7px;
+    text-align: center;
+    background-image: url(/assets/image/background.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style main object*/
+.main .object{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.main .object .title{
+    color: white;
+    margin-right: 50px;
+}
+.main .object .title h1{
+    font-size: 90px;  
+}
+.main .object .title p{
+    font-size: 20px;
+    margin-top: 20px;
+}
+.main .object .image{
+    border: 5px solid white;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 400px;
+}
+.main .object .image:hover{
+    height: 470px;
+    transition: height 0.5s;
+}
+.main .object .image img{
+    height: 500px;
+}
+.main .object .cvbtn{
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff86;
+    color: #000000c6;
+    cursor: pointer;
+}
+.main .object .cvbtn a{
+    text-decoration: none;
+    color: inherit;
+}
+.main .object .cvbtn:hover{
+    background-color: #ffffff;
+    transition: 0.3s;
+}
